@@ -36,6 +36,7 @@ BuildRequires:  pkgconfig(xcb-util)
 BuildRequires:  pkgconfig(xkbcommon)
 BuildRequires:  pkgconfig(xrender)
 BuildRequires:  cups-devel
+BuildRequires:  gtest-devel
 
 # libQt5Gui.so.5(Qt_5.10.1_PRIVATE_API)(64bit) needed by dtkwidget-2.0.6.1-1.fc29.x86_64
 BuildRequires:  qt5-qtbase-private-devel
