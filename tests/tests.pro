@@ -2,7 +2,7 @@ TEMPLATE = app
 CONFIG -= app_bundle
 
 # 如果不需要编译打印预览的单元测试 可以打开这个宏
-#DEFINES += DTK_NO_PRINTPREVIEWTEST
+DEFINES += DTK_NO_PRINTPREVIEWTEST
 
 QT += widgets dtkcore dtkgui testlib
 
