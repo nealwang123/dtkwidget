@@ -1477,9 +1477,13 @@ void DApplication::handleAboutAction()
     }
 
     if (d->aboutDialog) {
-        d->aboutDialog->show();
         d->aboutDialog->activateWindow();
         d->aboutDialog->raise();
+        if (DGuiApplicationHelper::isTabletEnvironment()) {
+            d->aboutDialog->exec();
+        } else {
+            d->aboutDialog->show();
+        }
         return;
     }
 
@@ -1496,8 +1500,6 @@ void DApplication::handleAboutAction()
         aboutDialog->setAcknowledgementLink(applicationAcknowledgementPage());
     }
     aboutDialog->setAcknowledgementVisible(d->acknowledgementPageVisible);
-
-    aboutDialog->show();
     aboutDialog->setAttribute(Qt::WA_DeleteOnClose);
 
     //目前的关于对话框是非模态的,这里的处理是防止关于对话框可以打开多个的情况
@@ -1507,6 +1509,12 @@ void DApplication::handleAboutAction()
     connect(d->aboutDialog, &DAboutDialog::destroyed, this, [=] {
         d->aboutDialog = nullptr;
     });
+
+    if (DGuiApplicationHelper::isTabletEnvironment()) {
+        aboutDialog->exec();
+    } else {
+        aboutDialog->show();
+    }
 }
 
 /**
