@@ -1282,7 +1282,7 @@ void DArrowRectanglePrivate::show(int x, int y)
     q->move(x, y);//Overload function
     if (!q->isVisible()) {
         q->QWidget::show();
-        q->QWidget::activateWindow();
+        //q->QWidget::activateWindow();
     }
 
     q->update();
