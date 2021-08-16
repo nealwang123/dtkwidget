@@ -1,0 +1,14 @@
+QT.dtkwidget@DTK_VERSION_SUFFIX@.VERSION = @DTK_WIDGET_VERSION@
+QT.dtkwidget@DTK_VERSION_SUFFIX@.MAJOR_VERSION = @PROJECT_VERSION_MAJOR@
+QT.dtkwidget@DTK_VERSION_SUFFIX@.MINOR_VERSION = @PROJECT_VERSION_MINOR@
+QT.dtkwidget@DTK_VERSION_SUFFIX@.PATCH_VERSION = @PROJECT_VERSION_PATCH@
+QT.dtkwidget@DTK_VERSION_SUFFIX@.name = dtkwidget@DTK_VERSION_SUFFIX@
+QT.dtkwidget@DTK_VERSION_SUFFIX@.module = dtkwidget@DTK_VERSION_SUFFIX@
+QT.dtkwidget@DTK_VERSION_SUFFIX@.tools = @CMAKE_INSTALL_PREFIX@/lib/@DTK_DEB_HOST_MULTIARCH@/libdtk-@DTK_WIDGET_VERSION@/DWidget@DTK_VERSION_SUFFIX@/bin
+QT.dtkwidget@DTK_VERSION_SUFFIX@.libs = @CMAKE_INSTALL_PREFIX@/lib/@DTK_DEB_HOST_MULTIARCH@
+QT.dtkwidget@DTK_VERSION_SUFFIX@.includes = @CMAKE_INSTALL_PREFIX@/include/libdtk-@DTK_WIDGET_VERSION@/DWidget@DTK_VERSION_SUFFIX@
+QT.dtkwidget@DTK_VERSION_SUFFIX@.frameworks =
+QT.dtkwidget@DTK_VERSION_SUFFIX@.depends = core gui dtkcore@DTK_VERSION_SUFFIX@ network concurrent dtkgui@DTK_VERSION_SUFFIX@ printsupport printsupport_private widgets widgets_private gui_private x11extras dbus
+QT.dtkwidget@DTK_VERSION_SUFFIX@.module_config = v2 internal_module
+QT.dtkwidget@DTK_VERSION_SUFFIX@.DEFINES =
+QT_MODULES +=

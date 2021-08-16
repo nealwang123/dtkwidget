@@ -28,4 +28,4 @@ src/qt_lib_dtk*.pri
 .vscode/
 
 # cmake files
-cmake/*
+# cmake/*
