@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${prefix}/lib/@DTK_DEB_HOST_MULTIARCH@
+includedir=${prefix}/include/libdtk-@DTK_WIDGET_VERSION@/DWidget@DTK_VERSION_SUFFIX@
+
+Name: DTKWIDGET@DTK_VERSION_SUFFIX@
+Description: Deepin Tool Kit dtkwidget@DTK_VERSION_SUFFIX@ header files
+Version: @DTK_WIDGET_VERSION@
+Libs: -ldtkwidget@DTK_VERSION_SUFFIX@
+Cflags: -I${includedir}
+Requires: dtkcore@DTK_VERSION_SUFFIX@, dtkgui@DTK_VERSION_SUFFIX@

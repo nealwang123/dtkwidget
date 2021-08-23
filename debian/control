@@ -3,7 +3,7 @@ Section: libdevel
 Priority: optional
 Maintainer: Deepin Packages Builder <packages@deepin.com>
 Build-Depends: debhelper (>= 9), pkg-config, libudev-dev,
- libqt5x11extras5-dev, libxext-dev, qttools5-dev-tools,
+ libqt5x11extras5-dev, libxext-dev, qttools5-dev-tools, cmake,
  x11proto-xext-dev, libxcb-util0-dev, libstartup-notification0-dev,
  libmtdev-dev, qtbase5-private-dev, libegl1-mesa-dev, libudev-dev,
  libfontconfig1-dev, libfreetype6-dev, libglib2.0-dev, libxrender-dev,
