@@ -21,9 +21,9 @@ set -e
 ##################################################
 
 # 自动按照 debian/control 中的描述安装依赖
-[[ ”$*“ =~ dep ]] && sudo apt update &&   \
-    sudo apt -y install qtcreator       \
-    qt5-default build-essential &&      \
+[[ ”$*“ =~ dep ]] && sudo apt update &&     \
+    sudo apt -y install qtcreator lcov      \
+    qt5-default build-essential &&          \
     sudo apt -y build-dep .
 
 # 生成到当前目录的 build 目录下编译并提示目标文件生成位置
@@ -39,6 +39,7 @@ SHARED_LIB_TYPE="ON"
 [[ -z "$*" || "$*" =~ clean ]] && cmake -S . -B ${BUILD_DIR}    \
     -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR}                       \
     -DBUILD_SHARED_LIBS:BOOL=${SHARED_LIB_TYPE}                 \
+    -DDTK_HAS_UNIT_TEST:BOOL=ON                                 \
     && cmake --build ${BUILD_DIR} --target all -- -j$(nproc)
 
 [[ "$*" =~ check ]] && cmake --build ${BUILD_DIR} --target check -- -j$(nproc)

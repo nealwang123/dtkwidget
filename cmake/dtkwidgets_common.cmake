@@ -70,7 +70,7 @@ set(DTKWIDGETS_COMMON_LIBS
     -lpthread
     # TODO support gtk+-2.0
 )
-message("${CMAKE_THREAD_LIBS_INIT}")
+
 add_definitions(
     -DENABLE_AI
     -DQT_NO_DEBUG
