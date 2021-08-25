@@ -45,6 +45,7 @@ endif()
 
 # Default, compile and install translation files separately,
 # search tarnslation files from fixed path.
+option(DTK_HAS_UNIT_TEST "Control unit test generate coverage." OFF)
 option(DTK_HAS_TRANSLATION "Control whether translated files are compiled and install." ON)
 option(DTK_STATIC_TRANSLATION "Control whether translated files are compiled with binary." OFF)
 
