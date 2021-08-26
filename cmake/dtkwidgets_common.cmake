@@ -37,6 +37,11 @@ find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED COMPONENTS Core Gui Widgets Net
 # for qm files, need qttools5-dev
 # find_package(Qt5LinguistTools REQUIRED)
 
+if (DTK_HAS_UNIT_TEST)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lgcov --coverage")
+endif()
+
 set(DTKWIDGETS_COMMON_LIBS
     Qt5::Core
 
@@ -53,7 +58,8 @@ set(DTKWIDGETS_COMMON_LIBS
 
     ${DtkGui${DTK_VERSION_SUFFIX}_LIBRARIES}
 
-    ${GSettings_Qt}
+    ${GSettings_Qt_LIBRARIES}
+
     ${Xext_LIB}
     ${X11_LIB}
     ${Xi_LIB}
