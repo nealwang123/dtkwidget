@@ -1,19 +1,12 @@
 cmake_minimum_required(VERSION 3.13)
 
-include(${CMAKE_CURRENT_LIST_DIR}/../cmake/config.cmake)
+include(../cmake/config.cmake)
 
 project(dtkwidget${DTK_VERSION_SUFFIX} VERSION ${DTK_WIDGET_VERSION} LANGUAGES CXX)
 
-include(${CMAKE_CURRENT_LIST_DIR}/../cmake/dtkwidgets_common.cmake)
+include(../cmake/dtkwidgets_common.cmake)
 
 add_definitions(-DQT_NO_KEYWORDS)
-
-if (DTK_HAS_UNIT_TEST)
-    set(GCC_COVERAGE_COMPILE_FLAGS "-fprofile-arcs -ftest-coverage")
-    set(GCC_COVERAGE_LINK_FLAGS "-lgcov")
-endif()
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${GCC_COVERAGE_LINK_FLAGS}")
 
 include_directories(platforms translations util widgets)
 
@@ -559,7 +552,6 @@ if (DTK_HAS_TRANSLATION)
     endif()
 endif()
 
-option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
 if (BUILD_SHARED_LIBS)
     add_library(${PROJECT_NAME} SHARED ${HEADERS} ${SOURCES} ${RESOURCES})
 else()
