@@ -31,19 +31,58 @@ set(CMAKE_CXX_FLAGS
 add_executable(${PROJECT_NAME}
     main.cpp
 
+    ./testcases/widgets/ut_daboutdialog.cpp
+    ./testcases/widgets/ut_dabstractdialog.cpp
     ./testcases/widgets/ut_dalertcontrol.cpp
     ./testcases/widgets/ut_dcrumbedit.cpp
+    ./testcases/widgets/ut_danchors.cpp
+    ./testcases/widgets/ut_darrowbutton.cpp
+    ./testcases/widgets/ut_darrowrectangle.cpp
+    ./testcases/widgets/ut_dbackgroundgroup.cpp
+    ./testcases/widgets/ut_dbaseline.cpp
     ./testcases/widgets/ut_dboxwidget.cpp
     ./testcases/widgets/ut_dblureffectwidget.cpp
+    ./testcases/widgets/ut_dbuttonbox.cpp
+    ./testcases/widgets/ut_dcircleprogress.cpp
+    ./testcases/widgets/ut_dclipeffectwidget.cpp
+    ./testcases/widgets/ut_dcoloredprogressbar.cpp
+    ./testcases/widgets/ut_dcommandlinkbutton.cpp
+    ./testcases/widgets/ut_ddialog.cpp
+    ./testcases/widgets/ut_ddialogclosebutton.cpp
+    ./testcases/widgets/ut_ddrawer.cpp
+    ./testcases/widgets/ut_ddrawergroup.cpp
+    ./testcases/widgets/ut_denhancedwidget.cpp
+    ./testcases/widgets/ut_dfilechooseredit.cpp
+    ./testcases/widgets/ut_dfiledialog.cpp
+    ./testcases/widgets/ut_dfloatingbutton.cpp
+    ./testcases/widgets/ut_dfloatingwidget.cpp
+    ./testcases/widgets/ut_dflowlayout.cpp
+    ./testcases/widgets/ut_dframe.cpp
+    ./testcases/widgets/ut_dgraphicsclipeffect.cpp
+    ./testcases/widgets/ut_dgraphicsgloweffect.cpp
+    ./testcases/widgets/ut_dheaderline.cpp
     ./testcases/widgets/ut_diconbutton.cpp
     ./testcases/widgets/ut_dtoolbutton.cpp
     ./testcases/widgets/ut_dprogressbar.cpp
     ./testcases/widgets/ut_dwaterprogress.cpp
     ./testcases/widgets/ut_danchor.cpp
+    ./testcases/widgets/ut_dinputdialog.cpp
+    ./testcases/widgets/ut_dlabel.cpp
+    ./testcases/widgets/ut_dlineedit.cpp
+    ./testcases/widgets/ut_dlistview.cpp
+    ./testcases/widgets/ut_dloadingindicator.cpp
     ./testcases/widgets/ut_dmainwindow.cpp
     ./testcases/widgets/ut_dfloatingmessage.cpp
     ./testcases/widgets/ut_dswitchbutton.cpp
     ./testcases/widgets/ut_dwarningbutton.cpp
+    ./testcases/widgets/ut_dmessagemanager.cpp
+    ./testcases/widgets/ut_dmpriscontrol.cpp
+    ./testcases/widgets/ut_dpasswordedit.cpp
+    ./testcases/widgets/ut_dpicturesequenceview.cpp
+    ./testcases/widgets/ut_dsearchcombobox.cpp
+    ./testcases/widgets/ut_dsearchedit.cpp
+    ./testcases/widgets/ut_dsettingsdialog.cpp
+    ./testcases/widgets/ut_dsettingswidgetfactory.cpp
     ./testcases/widgets/ut_dsimplelistview.cpp
     ./testcases/widgets/ut_dkeysequenceedit.cpp
     ./testcases/widgets/ut_dslider.cpp
@@ -51,8 +90,17 @@ add_executable(${PROJECT_NAME}
     ./testcases/widgets/ut_dipv4lineedit.cpp
     ./testcases/widgets/ut_darrowlinedrawer.cpp
     ./testcases/widgets/ut_darrowlineexpand.cpp
+    ./testcases/widgets/ut_dspinbox.cpp
     ./testcases/widgets/ut_dspinner.cpp
     ./testcases/widgets/ut_dshaowline.cpp
+    ./testcases/widgets/ut_dstackwidget.cpp
+    ./testcases/widgets/ut_dstyle.cpp
+    ./testcases/widgets/ut_dstyleditemdelegate.cpp
+    ./testcases/widgets/ut_dstyleoption.cpp
+    ./testcases/widgets/ut_dsuggestbutton.cpp
+    ./testcases/widgets/ut_dtabbar.cpp
+    ./testcases/widgets/ut_dtickeffect.cpp
+    ./testcases/widgets/ut_dtooltip.cpp
     ./testcases/widgets/ut_dwindowclosebutton.cpp
     ./testcases/widgets/ut_dwindowminbutton.cpp
     ./testcases/widgets/ut_dwindowoptionbutton.cpp
