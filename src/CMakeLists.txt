@@ -562,6 +562,8 @@ target_link_libraries(${PROJECT_NAME}
     ${DTKWIDGETS_COMMON_LIBS}
 )
 
+include(../cmake/platform_specific.cmake)
+
 # set_target_properties(${PROJECT_NAME} PROPERTIES CXX_VISIBILITY_PRESET hidden)
 set_target_properties(${PROJECT_NAME} PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})
 set_target_properties(${PROJECT_NAME} PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION ${PROJECT_VERSION_MAJOR})

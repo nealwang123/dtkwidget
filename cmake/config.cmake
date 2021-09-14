@@ -25,24 +25,6 @@ if (dont_use_default_prefix)
     set(CMAKE_INSTALL_PREFIX "/usr")
 endif()
 
-if (${CMAKE_SYSTEM_PROCESSOR} MATCHES "mips64")
-    target_compile_options(${PROJECT_NAME} PRIVATE
-        "-O3                        \
-        -ftree-vectorize            \
-        -march=loongson3a           \
-        -mhard-float                \
-        -mno-micromips              \
-        -mno-mips16                 \
-        -flax-vector-conversions    \
-        -mloongson-ext2             \
-        -mloongson-mmi"
-    )
-
-    if (BUILD_SHARED_LIBS)
-        target_compile_options(${PROJECT_NAME} PRIVATE "-Wl,-z,noexecstack")
-    endif()
-endif()
-
 # Default, compile and install translation files separately,
 # search tarnslation files from fixed path.
 option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
