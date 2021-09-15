@@ -33,7 +33,7 @@ option(DTK_HAS_TRANSLATION "Control whether translated files are compiled and in
 option(DTK_STATIC_TRANSLATION "Control whether translated files are compiled with binary." OFF)
 
 set(DWIDGET_TRANSLATIONS_PATH
-    "/usr/share/libdtk-${DTK_WIDGET_VERSION}/DWidget${DTK_VERSION_SUFFIX}/translations"
+    "${CMAKE_INSTALL_PREFIX}/share/libdtk-${DTK_WIDGET_VERSION}/DWidget${DTK_VERSION_SUFFIX}/translations"
 )
 set(DWIDGET_TRANSLATIONS_DIR
     "libdtk-${DTK_WIDGET_VERSION}/DWidget${DTK_VERSION_SUFFIX}/translations"
