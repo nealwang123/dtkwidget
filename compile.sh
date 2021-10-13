@@ -42,8 +42,8 @@ BUILD_DIR=${CURRENT_DIR}/build
 INSTALL_DIR=${BUILD_DIR}/out
 SHARED_LIB_TYPE="ON"
 
-[[ ”$*“ =~ dep ]] && InstallDependency
-[[ ”$*“ =~ res ]] && ShowBuildResult ${BUILD_DIR} && exit 0
+[[ "$*" =~ dep ]] && InstallDependency
+[[ "$*" =~ res ]] && ShowBuildResult ${BUILD_DIR} && exit 0
 
 [[ "$*" =~ static ]] && SHARED_LIB_TYPE="OFF"
 [[ "$*" =~ clean ]] && rm -rf "${BUILD_DIR}"
