@@ -19,9 +19,8 @@ set(DTK_VERSION_SUFFIX "")
 set(AUTOMOC_COMPILER_PREDEFINES ON)
 
 # rewrite install prefix of target
-# /use/local -> /usr/lib or /usr/include ...
-string(COMPARE EQUAL "/usr/local" "${CMAKE_INSTALL_PREFIX}" dont_use_default_prefix)
-if (dont_use_default_prefix)
+# /usr/local -> /usr/lib or /usr/include ...
+if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
     set(CMAKE_INSTALL_PREFIX "/usr")
 endif()
 
